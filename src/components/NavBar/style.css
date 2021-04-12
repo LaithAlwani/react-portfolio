@@ -1,0 +1,48 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  position: relative;
+  outline: none;
+}
+.navbar {
+  padding: 2rem 0 !important;
+  font-weight: 500;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.navbar-item :before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: #adadad;
+  visibility: hidden;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+  /* text-decoration: none; */
+  /* color: rgba(0, 0, 0, 0.4); */
+  /* z-index: 1; */
+}
+
+.navbar-item :hover:before
+ {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+@media only screen and (max-width:576px){
+    .navbar{
+        width: 100%;
+    }
+}

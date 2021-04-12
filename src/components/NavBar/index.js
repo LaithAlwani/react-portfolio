@@ -1,18 +1,19 @@
 import "./style.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-const NavBar = () => {
+const Navbar = () => {
+  const location = useLocation();
   return (
-    <nav className="navbar navbar-expand navbar-dark bg-dark">
+    <nav className="navbar navbar-expand navbar-light">
       <Link to="/" className="navbar-brand">
         Laith Alwani
       </Link>
-      <ul className="navbar-nav">
+      <ul className="navbar-nav ml-auto">
         <li className="navbar-item">
           <Link
             to="/"
             className={
-              window.location.path === "/" ? "nav-link active" : "nav-link"
+              location.pathname === "/" ? "nav-link active" : "nav-link"
             }
           >
             About
@@ -22,7 +23,7 @@ const NavBar = () => {
           <Link
             to="/portfolio"
             className={
-              window.location.path === "/portfolio"
+              location.pathname === "/portfolio"
                 ? "nav-link active"
                 : "nav-link"
             }
@@ -31,9 +32,8 @@ const NavBar = () => {
           </Link>
         </li>
       </ul>
-      
     </nav>
   );
 };
 
-export default NavBar;
+export default Navbar;
