@@ -1,0 +1,35 @@
+/* .footer {
+    min-height: 100px;
+    background: #E5E5E5;
+    position: relative;
+  }
+  
+  .footer span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3px;
+    background: #B8B8B8;
+  }
+   */
+footer .fa-github-square {
+  color: black;
+}
+
+footer .fa-instagram {
+  background: #d6249f;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  height: 20px;
+  width: 20px;
+  color: white;
+  border-radius: 5px;
+  padding-top: 3px;
+}
