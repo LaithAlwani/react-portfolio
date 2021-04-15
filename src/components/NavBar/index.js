@@ -5,15 +5,15 @@ const Navbar = () => {
   const location = useLocation();
   return (
     <nav className="navbar navbar-expand navbar-light">
-      <Link to="/" className="navbar-brand">
+      <Link to="/react-portfolio" className="navbar-brand">
         Laith Alwani
       </Link>
       <ul className="navbar-nav ml-auto">
         <li className="navbar-item">
           <Link
-            to="/"
+            to="/react-portfolio"
             className={
-              location.pathname === "/" ? "nav-link active" : "nav-link"
+              location.pathname === "/react-portfolio" ? "nav-link active" : "nav-link"
             }
           >
             About
@@ -21,9 +21,9 @@ const Navbar = () => {
         </li>
         <li className="navbar-item">
           <Link
-            to="/portfolio"
+            to="/react-portfolio/portfolio"
             className={
-              location.pathname === "/portfolio"
+              location.pathname === "/react-portfolio/portfolio"
                 ? "nav-link active"
                 : "nav-link"
             }
