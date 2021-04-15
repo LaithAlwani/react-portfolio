@@ -1,19 +1,19 @@
 import "./style.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, BrowserRouter as Router } from "react-router-dom";
 
 const Navbar = () => {
   const location = useLocation();
   return (
     <nav className="navbar navbar-expand navbar-light">
-      <Link to="/react-portfolio" className="navbar-brand">
+      <Link to="/" className="navbar-brand">
         Laith Alwani
       </Link>
       <ul className="navbar-nav ml-auto">
         <li className="navbar-item">
           <Link
-            to="/react-portfolio"
+            to="/"
             className={
-              location.pathname === "/react-portfolio" ? "nav-link active" : "nav-link"
+              location.pathname === "/" ? "nav-link active" : "nav-link"
             }
           >
             About
@@ -21,9 +21,9 @@ const Navbar = () => {
         </li>
         <li className="navbar-item">
           <Link
-            to="/react-portfolio/portfolio"
+            to="/portfolio"
             className={
-              location.pathname === "/react-portfolio/portfolio"
+              location.pathname === "/portfolio"
                 ? "nav-link active"
                 : "nav-link"
             }

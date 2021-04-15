@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar/index";
 import About from "./pages/about";
@@ -7,11 +7,11 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <Router>
+    <Router >
       <Wrapper>
         <Navbar />
-        <Route exact path="/react-portfolio" component={About}/>
-        <Route path="/react-portfolio/portfolio" component={Portfolio}/>
+        <Route exact path="/" component={About}/>
+        <Route path="/portfolio" component={Portfolio}/>
       </Wrapper>
       <Footer />  
     </Router>
