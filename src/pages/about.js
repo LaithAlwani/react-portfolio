@@ -1,11 +1,11 @@
-
+import image from '../images/my-image.jpg'
 const About = () => {
 
     return (
         <div className="row">
             {/* <!-- Personal Image  --> */}
             <div className=" col-md-6 order-md-2 ">
-                <img className="img-fluid p-3" src="assets/images/my-image.JPG" alt="middle eastern man" />
+                <img className="img-fluid p-3" src={image} alt="middle eastern man" />
             </div>
             {/* <!-- About Me --> */}
             <article className="col-md-6 order-md-1 my-auto">

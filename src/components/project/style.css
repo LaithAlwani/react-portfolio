@@ -1,0 +1,13 @@
+.card{
+    width: 50%;
+    margin: 3rem auto;
+}
+
+ul{
+    list-style: none;
+}
+
+.btn{
+    background-color: lightgrey !important;
+    margin: 0 0.25rem;
+}
