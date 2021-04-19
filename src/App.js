@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import Wrapper from "./components/Wrapper";
 import Navbar from "./components/Navbar/index";
-import About from "./pages/about";
-import Portfolio from "./pages/portfolio";
+import About from "./pages/About";
+import Portfolio from "./pages/Portfolio";
 import Footer from "./components/Footer";
 
 function App() {

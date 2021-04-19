@@ -1,10 +1,33 @@
-import React from 'react'
-import Project from "../components/project"
+import React, { useState, useEffect } from "react";
+import Project from "../components/project";
+import ProjectContext from "../utils/ProjectContext";
+import Projects from "../utils/Projects"
 
-function portfolio() {
-    return (
-        <Project />
-    )
+function Portfolio() {
+  const [projectContext, setProjectContext] = useState({
+    title: "",
+    image: "",
+    description: "",
+    technologies: [],
+    appLink: "",
+    repoLink: "",
+  });
+  const [projectIndex, setProjectIndex] = useState(0)
+
+  useEffect(() => {
+    setProjectContext(Projects[0]);
+  }, []);
+  
+
+  const loadProject = () => {
+    console.log("Project loaded");
+  };
+
+  return (
+      <ProjectContext.Provider value={projectContext}>
+          <Project />
+      </ProjectContext.Provider>
+  );
 }
 
-export default portfolio
+export default Portfolio;

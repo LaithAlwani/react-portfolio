@@ -11,3 +11,10 @@ ul{
     background-color: lightgrey !important;
     margin: 0 0.25rem;
 }
+
+@media only screen and (max-width:768px) {
+    .card{
+        width: 100%;
+        margin: 0rem;
+    }
+}

@@ -1,36 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import image from "../../images/weather.png";
+import ProjectContext from "../../utils/ProjectContext";
 import "./style.css"
 
 function Project() {
+  const {title, image, description, technologies,appLink,repoLink} = useContext(ProjectContext)
   return (
     <div className="card">
       <img
         src={image}
-        alt="white gears with a blue backgorund titled Web development Projects"
+        alt="Alt Description"
         className="card-img-top"
       />
       <div className="card-body ">
-        <h5 className="card-title">Weather Dashboard</h5>
-        <p className="card-text">
-          provides current weather details and 5 days forecast for a specific
-          city
+        <h5 className="card-title">{title}</h5>
+        <p className="card-text">{description}
         </p>
         <div className=" card-text ">
           <p>Technlogies:</p>
           <ul>
-            <li>Html</li>
-            <li>CSS</li>
-            <li>Javascript</li>
-            <li>UIKit (CSS frame work)</li>
-            <li>Open Weather Map API</li>
+            {technologies.map((tech, index) => <li key={index}>{tech}</li>)}
           </ul>
         </div>
 
         <div className="text-center">
           <Link
-            to={{ pathname: "https://laithalwani.github.io/weather-dashboard" }}
+            to={{ pathname: appLink }}
             className="btn btn-sm"
             target="_blank"
           >
@@ -38,7 +33,7 @@ function Project() {
           </Link>
           <Link
             to={{
-              pathname: "https://github.com/LaithAlwani/weather-dashboard",
+              pathname: repoLink
             }}
             className="btn btn-sm"
             target="_blank"
