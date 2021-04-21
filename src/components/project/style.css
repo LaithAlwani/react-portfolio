@@ -17,6 +17,5 @@ ul{
 @media only screen and (max-width:768px) {
     .card{
         width: 100%;
-        margin: 0rem;
     }
 }
