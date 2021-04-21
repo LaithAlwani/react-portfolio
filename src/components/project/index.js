@@ -50,14 +50,14 @@ function Project({ handleBtnClick }) {
       </div>
       <div className="text-center">
       <button
-        className="btn btn-danger"
+        className="btn"
         data-value="previous"
         onClick={handleBtnClick}
       >
         Pervious
       </button>
       <button
-        className="btn btn-Primary"
+        className="btn"
         data-value="next"
         onClick={handleBtnClick}
       >
