@@ -16,16 +16,44 @@ function Portfolio() {
 
   useEffect(() => {
     setProjectContext(Projects[0]);
+    
   }, []);
   
+  function nextProject(projectIndex) {
+    // Ensure that the user index stays within our range of users
+    if (projectIndex >= Projects.length) {
+      projectIndex = 0;
+    }
+    setProjectContext(Projects[projectIndex]);
+    setProjectIndex(projectIndex);
+    
+  }
 
-  const loadProject = () => {
-    console.log("Project loaded");
-  };
+  function previousProject(projectIndex) {
+    // Ensure that the user index stays within our range of users
+    if (projectIndex < 0) {
+      projectIndex = Projects.length - 1;
+    }
+    setProjectContext(Projects[projectIndex]);
+    setProjectIndex(projectIndex);
+    
+  }
+
+  function handleBtnClick(event) {
+    // Get the title of the clicked button
+    const btnName = event.target.getAttribute("data-value");
+    if (btnName === "next") {
+      const newProjectIndex = projectIndex + 1;
+      nextProject(newProjectIndex);
+    } else {
+      const newProjectIndex = projectIndex - 1;
+      previousProject(newProjectIndex);
+    }
+  }
 
   return (
       <ProjectContext.Provider value={projectContext}>
-          <Project />
+          <Project handleBtnClick={handleBtnClick}/>
       </ProjectContext.Provider>
   );
 }

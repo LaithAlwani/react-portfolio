@@ -1,6 +1,7 @@
 .card{
-    width: 50%;
-    margin: 3rem auto;
+    width: 400px;
+    margin: 0 auto 1rem auto;
+    height: 50%;
 }
 
 ul{
@@ -9,7 +10,7 @@ ul{
 
 .btn{
     background-color: lightgrey !important;
-    margin: 0 0.25rem;
+    margin: 0 0.5rem;
 }
 
 @media only screen and (max-width:768px) {
