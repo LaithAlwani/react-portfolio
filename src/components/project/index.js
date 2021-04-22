@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import ProjectContext from "../../utils/ProjectContext";
+import {AiOutlineArrowRight, AiOutlineArrowLeft} from "react-icons/ai"
 import "./style.css";
 
 function Project({ handleBtnClick }) {
@@ -14,21 +15,28 @@ function Project({ handleBtnClick }) {
   } = useContext(ProjectContext);
   return (
     <>
-      <div className="card">
+      <div className="card text-center">
         <img src={image} alt="Alt Description" className="card-img-top" />
         <div className="card-body ">
-          <h5 className="card-title">{title}</h5>
-          <p className="card-text">{description}</p>
+          <h5 className="card-title ">{title}</h5>
+          <p className="card-text text-center">{description}</p>
           <div className=" card-text ">
-            <p>Technlogies:</p>
-            <ul>
+            <h6>Technlogies:</h6>
+            <div className="row">
+              {technologies.map((tech, index) => (
+                <div className="col-md-6">
+                  <p key={index}>{tech}</p>
+                </div>
+              ))}
+            </div>
+            {/* <ul>
               {technologies.map((tech, index) => (
                 <li key={index}>{tech}</li>
               ))}
-            </ul>
+            </ul> */}
           </div>
 
-          <div className="text-center">
+          <div className="">
             <Link
               to={{ pathname: appLink }}
               className="btn btn-sm"
@@ -49,22 +57,13 @@ function Project({ handleBtnClick }) {
         </div>
       </div>
       <div className="text-center">
-      <button
-        className="btn"
-        data-value="previous"
-        onClick={handleBtnClick}
-      >
-        Pervious
-      </button>
-      <button
-        className="btn"
-        data-value="next"
-        onClick={handleBtnClick}
-      >
-        Next
-      </button>
+        <button className="btn" data-value="previous" onClick={handleBtnClick}>
+          <AiOutlineArrowLeft />
+        </button>
+        <button className="btn" data-value="next" onClick={handleBtnClick}>
+        <AiOutlineArrowRight />
+        </button>
       </div>
-      
     </>
   );
 }

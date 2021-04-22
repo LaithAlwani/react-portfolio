@@ -24,7 +24,7 @@ const Projects = [
     title: "Paletta Studio",
     image: paletta,
     description: "A digital media company that produces educational apps",
-    technologies: ["HTML", "CSS", "JavaScript", "UIKit","JQuery", "Giphy API", "Open Movie Database API","local storage"],
+    technologies: ["NodeJs","ExpressJs", "HTML", "CSS", "JavaScript", "UIKit"],
     appLink: "https://laithalwani.github.io/movie-search",
     repoLink: "https://github.com/LaithAlwani/movie-search",
   },
