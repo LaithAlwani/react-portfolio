@@ -11,6 +11,6 @@ A collection of information that includes an about me section along with project
 * React JS
 * CSS / Bootstrap
 
-please visit [Laith Alwani](https://www.laithalwani.ca)
+please visit [Laith Alwani](https://laithalwani.github.io/react-portfolio)
 
 please contact me at laithalwani@gmail.com for further information.
